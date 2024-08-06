@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+</body>
+<script>
+    function countvowels(str)
+    {
+        str = str.toLowerCase();
+        let count = 0;
+        for(let i=0; i<str.length; i++)
+        {
+            if(str.charAt(i) == 'a' || str.charAt(i) == 'e' || str.charAt(i) == 'i' || str.charAt(i) == 'o' || str.charAt(i) == 'u')
+            {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    //console.log("vowels : ",countvowels("nani"));
+
+    function findevenindex(arr) 
+    {
+        let i = 0;
+        do {
+            if (arr[i] % 2 === 0) {
+                return i;
+            }
+            i++;
+        } while (i < arr.length);
+        return -1;
+    }
+
+    //console.log(findevenindex([1, 3, 5, 2 , 4]));
+
+    function average(arr)
+    {
+        let n = arr.length;
+        let sum = 0;
+        for(let i=0; i<arr.length; i++)
+        {
+            sum += arr[i];
+        }
+        let average = sum/n;
+        return average;
+    }
+
+    console.log(average([1,2,3,4,5]));
+</script>
+</html>
